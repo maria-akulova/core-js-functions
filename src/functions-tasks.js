@@ -34,7 +34,7 @@ function getCurrentFunctionName() {
  */
 function getFunctionBody(func) {
   if (!func) return '';
-  return `${func}`;
+  return func;
 }
 
 /**
@@ -51,8 +51,8 @@ function getFunctionBody(func) {
  *  ]) => [0, 1, 2]
  *
  */
-function getArgumentsCount(/* funcs */) {
-  throw new Error('Not implemented');
+function getArgumentsCount(funcs) {
+  return funcs.map((func) => func.length);
 }
 
 /**
